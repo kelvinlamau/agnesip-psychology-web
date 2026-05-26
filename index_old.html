@@ -82,153 +82,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
-<style>
-  /* ── SECTION TITLE ENHANCEMENTS ── */
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    font-weight: 400;
-    color: var(--accent);
-    opacity: 1;
-  }
-  .eyebrow::before {
-    width: 40px;
-    background: var(--accent);
-    opacity: 0.7;
-  }
-
-  /* About section heading */
-  .about-grid h2 {
-    font-size: 44px !important;
-    letter-spacing: -0.01em;
-    background: linear-gradient(135deg, var(--ink) 60%, var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Hero h1 shimmer on em */
-  .hero-h1 em {
-    background: linear-gradient(120deg, var(--accent), #c4856a, var(--accent));
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmer 4s linear infinite;
-  }
-  @keyframes shimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-  }
-
-  /* CTA band heading */
-  .cta-band-text h2 {
-    font-size: 38px !important;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-  }
-
-  /* ── SCROLL FADE-IN ── */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .fade-in.delay-1 { transition-delay: 0.1s; }
-  .fade-in.delay-2 { transition-delay: 0.2s; }
-  .fade-in.delay-3 { transition-delay: 0.3s; }
-  .fade-in.delay-4 { transition-delay: 0.4s; }
-
-  /* ── CREDENTIALS ── */
-  .about-credentials > div {
-    padding: 16px 20px;
-    cursor: default;
-  }
-
-  /* ── CLINICAL EXPERIENCE card hover ── */
-  .exp-card {
-    background: var(--white);
-    padding: 40px 32px;
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .exp-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 0; height: 2px;
-    background: var(--accent);
-    transition: width 0.4s ease;
-  }
-  .exp-card:hover {
-    background: var(--parchment);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(61,43,31,0.08);
-  }
-  .exp-card:hover::after { width: 100%; }
-
-  /* exp card title prominence */
-  .exp-card-title {
-    font-family: var(--serif);
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    color: var(--ink);
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--parchment-warm);
-  }
-
-  /* exp list item hover */
-  .exp-card li {
-    font-size: 13px;
-    color: var(--ink-soft);
-    padding-left: 16px;
-    position: relative;
-    transition: color 0.2s;
-    cursor: default;
-  }
-  .exp-card li:hover { color: var(--ink); }
-  .exp-card li span {
-    position: absolute;
-    left: 0; top: 0;
-    color: var(--clay);
-    transition: color 0.2s;
-  }
-  .exp-card li:hover span { color: var(--accent); }
-
-  /* ── HERO STAT ── */
-  .hero-stats > div {
-    padding: 12px 16px;
-    cursor: default;
-  }
-
-  /* ── BTN hover enhancement ── */
-  .btn-ghost {
-    transition: background 0.25s, color 0.25s, border-color 0.25s;
-  }
-  .btn-ghost:hover {
-    background: var(--accent) !important;
-    color: var(--white) !important;
-    border-color: var(--accent) !important;
-  }
-
-  /* ── NAV link active indicator dot ── */
-  .nav-links a.active::before {
-    content: '';
-    position: absolute;
-    top: -6px; left: 50%;
-    transform: translateX(-50%);
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-</style>
 </head>
 <body>
 
@@ -317,7 +170,7 @@
   </div>
 </section>
 
-<div class="about-section fade-in">
+<div class="about-section">
   <div class="about-grid">
     <div class="about-photo">
       <div class="about-photo-frame">
@@ -348,7 +201,7 @@
 </div>
 
 <!-- ── CLINICAL EXPERIENCE ── -->
-<div class="fade-in" style="background:var(--parchment-warm);padding:100px 60px;">
+<div style="background:var(--parchment-warm);padding:100px 60px;">
   <div style="max-width:1100px;margin:0 auto;">
 
     <div class="eyebrow" style="margin-bottom:40px;" data-en="Clinical Experience" data-tc="臨床經驗">Clinical Experience</div>
@@ -356,49 +209,87 @@
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--clay-light);" id="exp-grid">
 
       <!-- Emotional Distress -->
-      <div class="exp-card fade-in delay-1">
-        <div class="exp-card-title" data-en="Emotional Distress" data-tc="情緒困擾">Emotional Distress</div>
+      <div style="background:var(--white);padding:40px 32px;">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;" data-en="Emotional Distress" data-tc="情緒困擾">Emotional Distress</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          <li data-en="Depression" data-tc="抑鬱症"><span>·</span>Depression</li>
-          <li data-en="Anxiety" data-tc="焦慮症"><span>·</span>Anxiety</li>
-          <li data-en="Panic Disorder" data-tc="驚恐症"><span>·</span>Panic Disorder</li>
-          <li data-en="Post-Traumatic Stress Disorder" data-tc="創傷後壓力症"><span>·</span>Post-Traumatic Stress Disorder</li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Depression" data-tc="抑鬱症">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Depression
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Anxiety" data-tc="焦慮症">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Anxiety
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Panic Disorder" data-tc="驚恐症">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Panic Disorder
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Post-Traumatic Stress Disorder" data-tc="創傷後壓力症">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Post-Traumatic Stress Disorder
+          </li>
         </ul>
       </div>
 
       <!-- Stress Management -->
-      <div class="exp-card fade-in delay-2">
-        <div class="exp-card-title" data-en="Stress Management" data-tc="壓力管理">Stress Management</div>
+      <div style="background:var(--white);padding:40px 32px;">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;" data-en="Stress Management" data-tc="壓力管理">Stress Management</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          <li data-en="Study / Work" data-tc="學業／工作壓力"><span>·</span>Study / Work</li>
-          <li data-en="Parenting" data-tc="育兒壓力"><span>·</span>Parenting</li>
-          <li data-en="Life changes (e.g. immigration, retirement)" data-tc="人生轉變（如移民、退休）"><span>·</span>Life changes (e.g. immigration, retirement)</li>
-          <li data-en="Bereavement, loss &amp; grief" data-tc="喪親、失落與哀傷"><span>·</span>Bereavement, loss &amp; grief</li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Study / Work" data-tc="學業／工作壓力">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Study / Work
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Parenting" data-tc="育兒壓力">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Parenting
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Life changes (e.g. immigration, retirement)" data-tc="人生轉變（如移民、退休）">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Life changes (e.g. immigration, retirement)
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Bereavement, loss &amp; grief" data-tc="喪親、失落與哀傷">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Bereavement, loss &amp; grief
+          </li>
         </ul>
       </div>
 
       <!-- Relationship Issues -->
-      <div class="exp-card fade-in delay-3">
-        <div class="exp-card-title" data-en="Relationship Issues" data-tc="人際關係問題">Relationship Issues</div>
+      <div style="background:var(--white);padding:40px 32px;">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;" data-en="Relationship Issues" data-tc="人際關係問題">Relationship Issues</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          <li data-en="Breakup" data-tc="分手"><span>·</span>Breakup</li>
-          <li data-en="Extramarital affairs" data-tc="外遇問題"><span>·</span>Extramarital affairs</li>
-          <li data-en="Family challenges" data-tc="家庭挑戰"><span>·</span>Family challenges</li>
-          <li data-en="Parent-child conflicts" data-tc="親子衝突"><span>·</span>Parent-child conflicts</li>
-          <li data-en="Couple therapy" data-tc="伴侶治療"><span>·</span>Couple therapy</li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Breakup" data-tc="分手">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Breakup
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Extramarital affairs" data-tc="外遇問題">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Extramarital affairs
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Family challenges" data-tc="家庭挑戰">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Family challenges
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Parent-child conflicts" data-tc="親子衝突">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Parent-child conflicts
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Couple therapy" data-tc="伴侶治療">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Couple therapy
+          </li>
         </ul>
       </div>
 
       <!-- Health & Self Image -->
-      <div class="exp-card fade-in delay-4">
-        <div class="exp-card-title" data-en="Health &amp; Self Image" data-tc="健康與自我形象">Health &amp; Self Image</div>
+      <div style="background:var(--white);padding:40px 32px;">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;" data-en="Health &amp; Self Image" data-tc="健康與自我形象">Health &amp; Self Image</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          <li data-en="Insomnia" data-tc="失眠"><span>·</span>Insomnia</li>
-          <li data-en="Chronic illness &amp; cancer" data-tc="慢性病與癌症"><span>·</span>Chronic illness &amp; cancer</li>
-          <li data-en="Chronic pain" data-tc="慢性疼痛"><span>·</span>Chronic pain</li>
-          <li data-en="Perfectionism" data-tc="完美主義"><span>·</span>Perfectionism</li>
-          <li data-en="Procrastination" data-tc="拖延"><span>·</span>Procrastination</li>
-          <li data-en="Self-blame" data-tc="自責"><span>·</span>Self-blame</li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Insomnia" data-tc="失眠">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Insomnia
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Chronic illness &amp; cancer" data-tc="慢性病與癌症">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Chronic illness &amp; cancer
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Chronic pain" data-tc="慢性疼痛">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Chronic pain
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Perfectionism" data-tc="完美主義">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Perfectionism
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Procrastination" data-tc="拖延">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Procrastination
+          </li>
+          <li style="font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;" data-en="Self-blame" data-tc="自責">
+            <span style="position:absolute;left:0;top:0;color:var(--clay);">·</span>Self-blame
+          </li>
         </ul>
       </div>
 
@@ -416,7 +307,7 @@
   }
 </style>
 
-<div class="cta-band-wrap fade-in">
+<div class="cta-band-wrap">
   <div class="cta-band">
     <div class="cta-band-text">
       <h2 data-en="Ready to take the first step?" data-tc="準備好踏出第一步了嗎？">Ready to take the first step?</h2>
@@ -471,24 +362,5 @@
 </footer>
 
 <script src="shared.js"></script>
-<script>
-  // Scroll-triggered fade-in
-  (function() {
-    var els = document.querySelectorAll('.fade-in');
-    if (!('IntersectionObserver' in window)) {
-      els.forEach(function(el) { el.classList.add('visible'); });
-      return;
-    }
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    els.forEach(function(el) { observer.observe(el); });
-  })();
-</script>
 </body>
 </html>
