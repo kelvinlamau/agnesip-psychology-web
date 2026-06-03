@@ -54,7 +54,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 300; line-height: 1.2; 
 .about-corner.tl { top: 20px; left: 20px; border-top: 1px solid var(--clay); border-left: 1px solid var(--clay); opacity: 0.6; }
 .about-corner.br { bottom: 20px; right: 20px; border-bottom: 1px solid var(--clay); border-right: 1px solid var(--clay); opacity: 0.6; }
 .about-photo-bg { position: absolute; bottom: -20px; left: -20px; width: 120px; height: 120px; background: var(--parchment-warm); z-index: -1; }
-.about-credentials { display: flex; gap: 32px; padding-top: 32px; border-top: 1px solid var(--parchment-warm); margin-top: 32px; }
+.about-photo-mobile { display: none; } /* hidden on desktop - shown via mobile CSS */
+.about-photo-col { display: block; }   /* desktop photo column visible */
 .about-cred-label { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 6px; }
 .about-cred-val { font-size: 15px; color: var(--ink-soft); line-height: 1.8; }
 .cta-band-wrap { border-bottom: 1px solid var(--parchment-warm); }
@@ -163,9 +164,8 @@ footer { background: var(--ink-warm); color: var(--parchment); padding: 60px 60p
 
   /* About section - stack text first, photo second on mobile */
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-photo-mobile-order { order: 2; }
-  .about-grid > div:last-child { order: 1; }
-  /* Shrink portrait on mobile so it doesn't dominate */
+  .about-photo-col { display: none; }        /* hide desktop photo col */
+  .about-photo-mobile { display: block; margin: 24px 0; } /* show inline photo */
   .about-photo-frame { aspect-ratio: 4/3 !important; }
 
   .section { padding: 56px 24px; }

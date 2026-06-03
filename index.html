@@ -288,7 +288,9 @@
 
 <div class="about-section fade-in">
   <div class="about-grid">
-    <div class="about-photo about-photo-mobile-order">
+
+    <!-- Left col on desktop: photo -->
+    <div class="about-photo about-photo-col">
       <div class="about-photo-frame">
         <div class="about-corner tl"></div>
         <div class="about-corner br"></div>
@@ -296,10 +298,22 @@
       </div>
       <div class="about-photo-bg"></div>
     </div>
-    <div>
+
+    <!-- Right col on desktop: bio + photo (mobile only) + credentials -->
+    <div class="about-text-col">
       <div class="eyebrow" data-en="About Agnes" data-tc="關於 Agnes">About Agnes</div>
       <p style="font-size:14px;color:var(--ink-soft);line-height:1.95;margin-bottom:16px;" data-en="Hello, this is Agnes. I am a registered clinical psychologist in Australia and Hong Kong. I provide psychological assessments and treatment to clients of all ages, both in-person in Sydney as well as by telehealth." data-tc="您好! 我是在澳洲及香港註冊的臨床心理學家，受訓於香港中文大學臨床心理學碩士課程，接受多方面的心理治療訓練（包括成人心理、兒童及青少年心理、醫療心理、家庭及職員心理輔導）。">Hello, this is Agnes. I am a registered clinical psychologist in Australia and Hong Kong. I provide psychological assessments and treatment to clients of all ages, both in-person in Sydney as well as by telehealth.</p>
       <p style="font-size:14px;color:var(--ink-soft);line-height:1.95;margin-bottom:16px;" data-en="My approach is collaborative, culturally-sensitive, and grounded in evidence-based treatments. My aim is to help clients build lives and relationships that are fulfilling, by guiding them to connect with what matters most and by equipping them with relevant psychological skills." data-tc="畢業後投身家庭服務，曾任職東華三院的綜合家庭服務中心。其後移居悉尼，致力提供多語言的心理評估及治療。同時亦為澳洲和香港提供視像心理服務。">My approach is collaborative, culturally-sensitive, and grounded in evidence-based treatments. My aim is to help clients build lives and relationships that are fulfilling, by guiding them to connect with what matters most and by equipping them with relevant psychological skills.</p>
+
+      <!-- Photo shown only on mobile, between bio and credentials -->
+      <div class="about-photo-mobile">
+        <div class="about-photo-frame" style="aspect-ratio:4/3;">
+          <div class="about-corner tl"></div>
+          <div class="about-corner br"></div>
+          <img src="Agnes_Portrait_web.avif" alt="Agnes Ip, Registered Clinical Psychologist Sydney" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        </div>
+      </div>
+
 <!--      <p style="font-size:14px;color:var(--ink-soft);line-height:1.95;" data-en="Agnes completed her clinical training in Hong Kong and Australia, and holds registration with the Australian Health Practitioner Regulation Agency (AHPRA). She is a member of the Australian Psychological Society (APS)." data-tc="Agnes 分別在香港及澳洲完成臨床心理學培訓，並在澳洲健康執業者監管局（AHPRA）持有註冊資格，同時是澳洲心理學學會（APS）會員。">Agnes completed her clinical training in Hong Kong and Australia, and holds registration with the Australian Health Practitioner Regulation Agency (AHPRA). She is a member of the Australian Psychological Society (APS).</p> -->
       <div class="about-credentials" style="display:block;padding-top:32px;border-top:1px solid var(--parchment-warm);margin-top:32px;">
 
@@ -352,6 +366,7 @@
 
       </div>
     </div>
+
   </div>
 </div>
 
