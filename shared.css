@@ -29,8 +29,8 @@ nav.scrolled { box-shadow: 0 1px 20px rgba(26,23,20,0.06); }
 .lang-btn:not(.active):hover { background: var(--clay-light); }
 .section { padding: 100px 60px; }
 .container { max-width: 1100px; margin: 0 auto; }
-.eyebrow { font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; font-weight: 400; }
-.eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--clay); flex-shrink: 0; }
+.eyebrow { font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; font-weight: 400; }
+.eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--ink-soft); flex-shrink: 0; }
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 300; line-height: 1.2; }
 .divider { width: 1px; height: 60px; background: var(--clay); margin: 0 auto; opacity: 0.6; }
 .btn-ghost { display: inline-block; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); background: transparent; border: 1px solid var(--clay); padding: 13px 32px; cursor: pointer; font-family: var(--sans); font-weight: 400; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
@@ -107,7 +107,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 300; line-height: 1.2; 
 .contact-info-items { display: flex; flex-direction: column; gap: 24px; }
 .contact-info-item { display: flex; align-items: flex-start; gap: 20px; }
 .contact-info-icon { width: 36px; height: 36px; border: 1px solid rgba(26,23,20,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); font-size: 14px; }
-.contact-info-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+.contact-info-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px; }
 .contact-info-value { font-size: 14px; color: var(--ink); line-height: 1.65; }
 .contact-right { background: var(--parchment); padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
 .contact-form-title { font-family: var(--serif); font-size: 30px; color: var(--ink); margin-bottom: 8px; }
@@ -128,9 +128,9 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 300; line-height: 1.2; 
 footer { background: var(--ink-warm); color: var(--ink); padding: 60px 60px 40px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 44px; border-bottom: 1px solid rgba(26,23,20,0.15); }
 .footer-brand-name { font-family: var(--serif); font-size: 21px; font-weight: 300; color: var(--ink); margin-bottom: 6px; }
-.footer-brand-sub { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+.footer-brand-sub { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); margin-bottom: 18px; }
 .footer-brand-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.9; }
-.footer-col-title { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+.footer-col-title { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); margin-bottom: 18px; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-links a { font-size: 14px; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--ink); }
