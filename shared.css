@@ -134,7 +134,7 @@ footer { background: var(--ink-warm); color: var(--ink); padding: 60px 60px 40px
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-links a { font-size: 14px; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--ink); }
-.footer-bottom { max-width: 1100px; margin: 22px auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--ink-muted); }
+.footer-bottom { max-width: 1100px; margin: 22px auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--ink-soft); }
 .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; background: none; border: none; cursor: pointer; padding: 4px; flex-shrink: 0; }
 .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; transform-origin: center; }
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
