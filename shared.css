@@ -13,8 +13,8 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--sans); background: var(--parchment); color: var(--ink); font-weight: 300; font-size: 17px; line-height: 1.8; overflow-x: hidden; }
 nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(247,244,239,0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--parchment-warm); z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 60px; transition: box-shadow 0.3s; }
 nav.scrolled { box-shadow: 0 1px 20px rgba(26,23,20,0.06); }
-.nav-brand { display: flex; flex-direction: column; gap: 1px; text-decoration: none; }
-.nav-brand-sub { font-size: 10px; letter-spacing: 0.18em; color: var(--ink-muted); font-weight: 300; }
+.nav-brand { display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none; }
+.nav-brand-logo { height: 36px; width: auto; display: block; }
 .nav-brand-name { font-family: var(--sans); font-size: 16px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); }
 .nav-right { display: flex; align-items: center; gap: 40px; }
 .nav-links { display: flex; gap: 40px; list-style: none; align-items: center; }
