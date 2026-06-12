@@ -15,7 +15,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); backgrou
 nav.scrolled { box-shadow: 0 1px 20px rgba(26,23,20,0.06); }
 .nav-brand { display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none; }
 .nav-brand-logo { height: 36px; width: auto; display: block; }
-.nav-brand-name { font-family: var(--sans); font-size: 16px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); }
+.nav-brand-name { font-family: var(--sans); font-size: 16px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
 .nav-right { display: flex; align-items: center; gap: 40px; }
 .nav-links { display: flex; gap: 40px; list-style: none; align-items: center; }
 .nav-links a { text-decoration: none; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); font-weight: 400; position: relative; padding-bottom: 3px; transition: color 0.2s; }
