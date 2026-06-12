@@ -152,6 +152,7 @@ footer { background: var(--ink-warm); color: var(--ink); padding: 60px 60px 40px
   nav { padding: 0 24px; }
   .nav-right { display: none; }
   .hamburger { display: flex; }
+  .nav-brand-name { font-size: 15px; letter-spacing: 0.05em; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   /* Hero photo panel height on mobile */
   .hero-photo-panel { height: 320px; min-height: unset !important; }
@@ -199,6 +200,7 @@ footer { background: var(--ink-warm); color: var(--ink); padding: 60px 60px 40px
   :root { --nav-h: 64px; }
   nav { padding: 0 20px; }
   .nav-brand-sub { display: none; }
+  .nav-brand-name { font-size: 13px; letter-spacing: 0.03em; }
   .hero-left { padding: 32px 20px 28px !important; }
   .hero-photo-panel { height: 260px; }
   .hero-h1 { font-size: clamp(32px, 9vw, 44px); }
