@@ -369,9 +369,8 @@
 
     <div class="eyebrow" style="margin-bottom:40px;" data-en="Clinical Experience" data-tc="臨床經驗">Clinical Experience</div>
 
+    <!-- Desktop: 4-column grid (hidden on mobile) -->
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--clay-light);" id="exp-grid">
-
-      <!-- Emotional Distress -->
       <div class="exp-card fade-in delay-1">
         <div class="exp-card-title" data-en="Emotional Distress" data-tc="情緒困擾">Emotional Distress</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
@@ -381,8 +380,6 @@
           <li data-en="Post-Traumatic Stress Disorder" data-tc="創傷後壓力症"><span>·</span>Post-Traumatic Stress Disorder</li>
         </ul>
       </div>
-
-      <!-- Stress Management -->
       <div class="exp-card fade-in delay-2">
         <div class="exp-card-title" data-en="Stress Management" data-tc="壓力管理">Stress Management</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
@@ -392,8 +389,6 @@
           <li data-en="Bereavement, loss &amp; grief" data-tc="喪親、失落與哀傷"><span>·</span>Bereavement, loss &amp; grief</li>
         </ul>
       </div>
-
-      <!-- Relationship Issues -->
       <div class="exp-card fade-in delay-3">
         <div class="exp-card-title" data-en="Relationship Issues" data-tc="人際關係問題">Relationship Issues</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
@@ -404,8 +399,6 @@
           <li data-en="Couple therapy" data-tc="伴侶治療"><span>·</span>Couple therapy</li>
         </ul>
       </div>
-
-      <!-- Health & Self Image -->
       <div class="exp-card fade-in delay-4">
         <div class="exp-card-title" data-en="Health &amp; Self Image" data-tc="健康與自我形象">Health &amp; Self Image</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
@@ -417,18 +410,104 @@
           <li data-en="Self-blame" data-tc="自責"><span>·</span>Self-blame</li>
         </ul>
       </div>
+    </div>
 
-    </div><!-- end exp-grid -->
+    <!-- Mobile: tab switcher (hidden on desktop) -->
+    <div id="exp-tabs">
+      <!-- Tab buttons -->
+      <div id="exp-tab-btns">
+        <button class="exp-tab-btn active" onclick="showExpTab(0)" data-en="Emotional Distress" data-tc="情緒困擾">Emotional Distress</button>
+        <button class="exp-tab-btn" onclick="showExpTab(1)" data-en="Stress Management" data-tc="壓力管理">Stress Management</button>
+        <button class="exp-tab-btn" onclick="showExpTab(2)" data-en="Relationship Issues" data-tc="人際關係問題">Relationship Issues</button>
+        <button class="exp-tab-btn" onclick="showExpTab(3)" data-en="Health &amp; Self Image" data-tc="健康與自我形象">Health &amp; Self Image</button>
+      </div>
+      <!-- Tab panels -->
+      <div class="exp-tab-panel active exp-card">
+        <div class="exp-card-title" data-en="Emotional Distress" data-tc="情緒困擾">Emotional Distress</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li data-en="Depression" data-tc="抑鬱症"><span>·</span>Depression</li>
+          <li data-en="Anxiety" data-tc="焦慮症"><span>·</span>Anxiety</li>
+          <li data-en="Panic Disorder" data-tc="驚恐症"><span>·</span>Panic Disorder</li>
+          <li data-en="Post-Traumatic Stress Disorder" data-tc="創傷後壓力症"><span>·</span>Post-Traumatic Stress Disorder</li>
+        </ul>
+      </div>
+      <div class="exp-tab-panel exp-card" style="display:none;">
+        <div class="exp-card-title" data-en="Stress Management" data-tc="壓力管理">Stress Management</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li data-en="Study / Work" data-tc="學業／工作壓力"><span>·</span>Study / Work</li>
+          <li data-en="Parenting" data-tc="育兒壓力"><span>·</span>Parenting</li>
+          <li data-en="Life changes (e.g. immigration, retirement)" data-tc="人生轉變（如移民、退休）"><span>·</span>Life changes (e.g. immigration, retirement)</li>
+          <li data-en="Bereavement, loss &amp; grief" data-tc="喪親、失落與哀傷"><span>·</span>Bereavement, loss &amp; grief</li>
+        </ul>
+      </div>
+      <div class="exp-tab-panel exp-card" style="display:none;">
+        <div class="exp-card-title" data-en="Relationship Issues" data-tc="人際關係問題">Relationship Issues</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li data-en="Breakup" data-tc="分手"><span>·</span>Breakup</li>
+          <li data-en="Extramarital affairs" data-tc="外遇問題"><span>·</span>Extramarital affairs</li>
+          <li data-en="Family challenges" data-tc="家庭挑戰"><span>·</span>Family challenges</li>
+          <li data-en="Parent-child conflicts" data-tc="親子衝突"><span>·</span>Parent-child conflicts</li>
+          <li data-en="Couple therapy" data-tc="伴侶治療"><span>·</span>Couple therapy</li>
+        </ul>
+      </div>
+      <div class="exp-tab-panel exp-card" style="display:none;">
+        <div class="exp-card-title" data-en="Health &amp; Self Image" data-tc="健康與自我形象">Health &amp; Self Image</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li data-en="Insomnia" data-tc="失眠"><span>·</span>Insomnia</li>
+          <li data-en="Chronic illness &amp; cancer" data-tc="慢性病與癌症"><span>·</span>Chronic illness &amp; cancer</li>
+          <li data-en="Chronic pain" data-tc="慢性疼痛"><span>·</span>Chronic pain</li>
+          <li data-en="Perfectionism" data-tc="完美主義"><span>·</span>Perfectionism</li>
+          <li data-en="Procrastination" data-tc="拖延"><span>·</span>Procrastination</li>
+          <li data-en="Self-blame" data-tc="自責"><span>·</span>Self-blame</li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 </div>
 
 <style>
-  @media (max-width: 900px) {
-    #exp-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  /* Desktop: show grid, hide tabs */
+  #exp-tabs { display: none; }
+  #exp-grid { display: grid; }
+
+  /* Tab button styles */
+  #exp-tab-btns {
+    display: flex;
+    border-bottom: 1px solid var(--parchment-warm);
+    margin-bottom: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  @media (max-width: 480px) {
-    #exp-grid { grid-template-columns: 1fr !important; }
+  #exp-tab-btns::-webkit-scrollbar { display: none; }
+  .exp-tab-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 14px 20px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    margin-bottom: -1px;
+    white-space: nowrap;
+  }
+  .exp-tab-btn:hover { color: var(--ink); }
+  .exp-tab-btn.active {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+  }
+  .exp-tab-panel { animation: fadeIn 0.3s ease; }
+
+  /* Mobile: hide grid, show tabs */
+  @media (max-width: 640px) {
+    #exp-grid { display: none !important; }
+    #exp-tabs { display: block; }
   }
 </style>
 
@@ -468,6 +547,16 @@
 </footer>
 
 <script src="shared.js"></script>
+<script>
+  function showExpTab(index) {
+    document.querySelectorAll('.exp-tab-btn').forEach(function(btn, i) {
+      btn.classList.toggle('active', i === index);
+    });
+    document.querySelectorAll('.exp-tab-panel').forEach(function(panel, i) {
+      panel.style.display = i === index ? 'block' : 'none';
+    });
+  }
+</script>
 <script>
   // Scroll-triggered fade-in
   (function() {
